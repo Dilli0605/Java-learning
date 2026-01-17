@@ -18,7 +18,7 @@ public class menu {
             System.out.print("Choose option: ");
 
             int choice = sc.nextInt();
-            sc.nextLine(); // clear buffer
+            sc.nextLine(); 
 
             switch (choice) {
                 case 1: add(); break;
@@ -33,8 +33,7 @@ public class menu {
             }
         }
     }
-
-    // ADD
+    
     static void add() {
         System.out.print("Enter name: ");
         String name = sc.nextLine();
@@ -42,7 +41,6 @@ public class menu {
         System.out.println("Added successfully!");
     }
 
-    // VIEW
     static void view() {
         if (names.isEmpty()) {
             System.out.println("No records found.");
@@ -55,7 +53,6 @@ public class menu {
         }
     }
 
-    // EDIT
     static void edit() {
         view();
         if (names.isEmpty()) return;
@@ -75,7 +72,6 @@ public class menu {
         System.out.println("Updated successfully!");
     }
 
-    // DELETE
     static void delete() {
         view();
         if (names.isEmpty()) return;
@@ -92,3 +88,4 @@ public class menu {
         names.remove(id - 1);
     }
 }
+
